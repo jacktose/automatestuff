@@ -10,18 +10,13 @@ from collections import namedtuple
 from string import ascii_uppercase as alphabet
 
 def main():
-    NUM_STATES = 50
-    NUM_QUESTIONS = NUM_STATES
     NUM_OPTIONS = 4
     NUM_STUDENTS = 35
 
     from data import capitals
-    if not len(capitals) == NUM_STATES:
-        print(f'Weird! You have {len(capitals)} states.')
-        return 1
-
     states = list(capitals.keys())
     tests = []
+
     for i in range(NUM_STUDENTS):
         questions = []
         for j,state in enumerate(states):
